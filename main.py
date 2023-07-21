@@ -65,4 +65,3 @@ if echo_type == 3:
 
 with open(CONF_FILENAME, 'a') as f:
     f.write('\n'+server_text)
-r
