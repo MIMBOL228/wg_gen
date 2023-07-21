@@ -38,7 +38,7 @@ client_keys = subprocess.check_output(['bash','./gen.sh']).decode("utf-8").split
 
 file = open(CONF_FILENAME).read()
 
-server_keys = re.search(r"PrivateKey \= ([a-zA-Z0-9\/=]+) \#([a-zA-Z0-9\/=]+)", file)
+server_keys = re.search(r"PrivateKey \= ([a-zA-Z0-9\/=+]+) \#([a-zA-Z0-9\/=+]+)", file)
 server_keys = [server_keys.group(1), server_keys.group(2)]
 
 server_port = re.search(r"ListenPort \= ([0-9]{1,5})", file).group(1)
